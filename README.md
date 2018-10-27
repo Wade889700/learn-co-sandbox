@@ -1,4 +1,4 @@
-Hi! 👋
+/*Hi! 👋
 
 You've opened the IDE Sandbox. 🎉
 
@@ -9,3 +9,15 @@ The work you do in the Sandbox will be saved from lesson to lesson, and is autom
 Please DO NOT touch this repository in GitHub, as it will affect your Sandbox experience, and potentially cause your work to be out of sync.
 
 To learn more about the Sandbox, please visit http://help.learn.co/ide-in-browser#sandbox.
+*/
+function outerFunction() {
+  var innerVariable = "I'm sort of a secret.";
+ 
+  return function innerScope() {
+    var inaccessible = "Nothing can touch me.";
+ 
+    return innerVariable;
+  }
+}
+var myScope = outerFunction();
+myScope;
