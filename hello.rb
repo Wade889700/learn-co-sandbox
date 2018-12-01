@@ -1,16 +1,18 @@
-class Person
+class Artist
+  attr_accessor :name
+ 
   def initialize(name)
     @name = name
+    @songs = []
   end
  
-  def name
-    @name
+  def add_song(name,genre)
+    song = Song.new(name, genre)
+    @songs << song
+    song.artist = self
   end
-  def name=(new_name)
-    @name = new_name
+ 
+  def songs
+    @songs
   end
 end
- 
-kanye = Person.new("Kanye")
-kanye.name = "Yeezy"
-puts kanye.name 
